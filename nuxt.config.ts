@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    "@nuxtjs/eslint-module",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     "nuxt-headlessui",
