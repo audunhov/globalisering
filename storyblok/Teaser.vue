@@ -6,6 +6,8 @@
 
 <script setup lang="ts">
   const props = defineProps<{
-    blok: Object
+    blok: {
+      headline: string
+    }
   }>();
 </script>
