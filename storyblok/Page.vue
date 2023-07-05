@@ -1,6 +1,5 @@
 <template>
   <div v-editable="blok" class="flex flex-col justify-between min-h-screen">
-    <Header/>
     <div class="grow">
       <StoryblokComponent
           v-for="blok in blok.body"
@@ -8,7 +7,6 @@
           :blok="blok"
       />
     </div>
-    <Footer/>
   </div>
 </template>
 

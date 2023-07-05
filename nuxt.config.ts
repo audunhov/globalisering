@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     "nuxt-headlessui",
+    "@nuxt/image",
     ["@storyblok/nuxt", {accessToken: process.env.STORYBLOK_TOKEN}]
   ]
 })
