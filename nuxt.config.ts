@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-headlessui",
     "@nuxt/image",
-    ["@storyblok/nuxt", {accessToken: process.env.STORYBLOK_TOKEN}]
-  ]
-})
+    ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
+  ],
+});

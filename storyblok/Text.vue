@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import {ISbRichtext} from "storyblok-js-client";
+import { ISbRichtext } from "storyblok-js-client";
 
 const props = defineProps<{
   blok: {
-    text: ISbRichtext
-  }
-}>()
+    text: ISbRichtext;
+  };
+}>();
 
-const richText = computed(() => renderRichText(props.blok.text))
+const richText = computed(() => renderRichText(props.blok.text));
 </script>
 
 <template>

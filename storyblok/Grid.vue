@@ -1,15 +1,15 @@
 <template>
   <div v-editable="blok" class="grid grid-cols-3">
-    <StoryblokComponent
-        v-for="blok in blok.columns"
-        :key="blok._uid"
-        :blok="blok"
-    />
+    <StoryblokComponent v-for="b in blok.columns" :key="b._uid" :blok="b" />
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  blok: Object
+import { SbBlokData } from "@storyblok/js";
+
+defineProps<{
+  blok: {
+    columns: SbBlokData[];
+  };
 }>();
 </script>

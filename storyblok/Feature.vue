@@ -1,11 +1,13 @@
 <template>
   <div v-editable="blok">
-    {{blok.name}}
+    {{ blok.name }}
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  blok: Object
+defineProps<{
+  blok: {
+    name: string;
+  };
 }>();
 </script>
