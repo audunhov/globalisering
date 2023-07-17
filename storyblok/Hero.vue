@@ -1,11 +1,11 @@
 <template>
-  <div v-editable="blok" class="flex items-center relative min-h-[500px]">
+  <div v-editable="blok" class="flex items-center relative min-h-[800px]">
     <div class="z-10 w-full text-center relative">
       <h1 class="uppercase text-6xl text-white font-bold">
         {{ blok.headline }}
       </h1>
       <h2 class="text-4xl text-white font-light">{{ blok.subheadline }}</h2>
-      <div class="mt-5">
+      <div class="mt-20 space-x-5">
         <ButtonLink
           v-for="(button, i) in blok.buttons"
           :key="i"
