@@ -1,22 +1,24 @@
 <template>
   <nav class="sticky w-full top-0 z-20 bg-primary">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex h-24 justify-between">
+      <div class="flex h-20 justify-between">
         <div class="flex">
           <NuxtLink href="/" class="flex flex-shrink-0 items-center">
-            <img
-              class="h-16 w-auto"
-              src="https://a.storyblok.com/f/239618/81x81/9dea372b00/logo.webp"
-              alt="Your Company"
-            />
+            <GlobkonfLogo class="h-16" />
           </NuxtLink>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- TODO storyblok links -->
           </div>
         </div>
+
         <div class="-mr-2 flex items-center">
           <button
-            class="inline-flex items-center justify-center p-2 text-secondary hover:bg-secondary hover:text-primary"
+            class="px-4 h-12 mr-10 hover:underline bg-secondary text-primary justify-self-end my-auto"
+          >
+            Kjøp billett
+          </button>
+          <button
+            class="inline-flex items-center justify-center p-2 text-secondary"
             @click="open = true"
           >
             <span class="sr-only">Open main menu</span>

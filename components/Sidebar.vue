@@ -22,7 +22,7 @@
               leave-to="translate-x-full"
             >
               <DialogPanel
-                class="mt-24 pointer-events-auto w-screen max-w-screen-md"
+                class="mt-20 pointer-events-auto w-screen max-w-screen-md"
               >
                 <div
                   class="flex h-full flex-col overflow-y-scroll bg-primary text-secondary py-6"
