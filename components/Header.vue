@@ -6,17 +6,16 @@
           <NuxtLink href="/" class="flex flex-shrink-0 items-center">
             <GlobkonfLogo class="h-16" />
           </NuxtLink>
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <!-- TODO storyblok links -->
-          </div>
         </div>
 
         <div class="-mr-2 flex items-center">
-          <button
-            class="px-4 h-12 mr-10 hover:underline bg-secondary text-primary justify-self-end my-auto"
+          <NuxtLink
+            v-if="button"
+            :to="button.cached_url"
+            class="p-3 h-12 mr-10 hover:underline bg-secondary text-primary justify-self-end"
           >
             Kjøp billett
-          </button>
+          </NuxtLink>
           <button
             class="inline-flex items-center justify-center p-2 text-secondary"
             @click="open = true"
@@ -29,14 +28,15 @@
       </div>
     </div>
   </nav>
-  <Sidebar v-model="open">
+  <Sidebar v-if="links" v-model="open">
     <NuxtLink
       v-for="link in links"
-      :key="link[0]"
-      :to="link[0]"
+      :key="link._uid"
+      :to="link.link.cached_url"
       active-class="font-bold"
       class="text-xl hover:underline"
-      >{{ link[1] }}</NuxtLink
+      @click="open = false"
+      >{{ link.link.story.name }}</NuxtLink
     >
   </Sidebar>
 </template>
@@ -46,8 +46,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const open = ref(false);
 
-const links = [
-  ["/", "Hjem"],
-  ["/om-oss", "Om oss"],
-];
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/config", {
+  version: "draft",
+  resolve_links: "url",
+});
+
+const links = ref(data.story.content.header_menu);
+const button = ref(data.story.content.header_button);
 </script>

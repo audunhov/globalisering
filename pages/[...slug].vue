@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <Header />
-    <StoryblokComponent v-if="story" :blok="story.content" />
-    <Footer />
-  </div>
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
 
 <script setup lang="ts">

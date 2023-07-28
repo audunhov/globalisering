@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-editable="blok"
-    class="p-3 rounded text-xl"
+    class="p-3 text-xl"
     :class="typeClasses[blok.style]"
     :to="blok.link.cached_url"
     >{{ blok.text }}
