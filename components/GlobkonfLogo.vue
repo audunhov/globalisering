@@ -1,6 +1,15 @@
 <template>
-  <nuxt-img
-    src="https://a.storyblok.com/f/239618/1500x1500/4c335663c3/logo-blue.jpg"
-    alt="logo"
-  />
+  <nuxt-img :src="img.filename" :alt="img.alt" />
 </template>
+
+<script setup lang="ts">
+import { Image } from "~/types";
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/config", {
+  version: "draft",
+  resolve_links: "url",
+});
+
+const img: Image = data.story.content.logo;
+</script>

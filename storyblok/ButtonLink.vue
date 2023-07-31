@@ -12,8 +12,8 @@
 import { Button } from "~/types";
 
 const typeClasses = {
-  primary: "bg-primary text-secondary hover:bg-secondary hover:text-primary",
-  secondary: "bg-secondary text-primary hover:bg-primary hover:text-secondary",
+  primary: "bg-primary text-secondary hover:underline",
+  secondary: "bg-secondary text-primary hover:underline",
 };
 
 defineProps<{
