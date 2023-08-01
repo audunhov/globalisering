@@ -3,7 +3,11 @@
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-20 justify-between">
         <div class="flex">
-          <NuxtLink href="/" class="flex flex-shrink-0 items-center">
+          <NuxtLink
+            href="/"
+            class="flex flex-shrink-0 items-center"
+            @click="open = false"
+          >
             <GlobkonfLogo class="h-16" />
           </NuxtLink>
         </div>
@@ -22,8 +26,8 @@
           >
             <span class="sr-only">Open main menu</span>
             <XMarkIcon
-              class="block h-8 w-8 rotate-45 transition"
-              :class="open && 'rotate-0'"
+              class="block h-8 w-8 transition"
+              :class="open ? 'rotate-0' : 'rotate-45'"
               aria-hidden="true"
             />
           </button>
@@ -67,17 +71,9 @@
                   class="flex h-full flex-col overflow-y-scroll bg-primary text-secondary py-6"
                 >
                   <div
-                    class="relative mt-6 flex-1 px-4 sm:px-6 flex flex-col items-center lg:items-start"
+                    class="relative mt-6 flex-1 space-y-6 px-4 sm:px-6 flex flex-col items-center lg:items-start"
                   >
-                    <NuxtLink
-                      v-for="link in links"
-                      :key="link._uid"
-                      :to="link.link.story.url"
-                      active-class="font-bold"
-                      class="text-xl hover:underline"
-                      @click="open = false"
-                      >{{ link.link.story.name }}</NuxtLink
-                    >
+                    <HeaderLink v-for="link in links" :blok="link" />
                   </div>
                 </div>
               </div>
