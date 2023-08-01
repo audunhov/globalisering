@@ -3,6 +3,8 @@
 </template>
 
 <script setup lang="ts">
+import { useTitle } from "@vueuse/core";
+
 const { slug } = useRoute().params as { slug: string[] };
 
 const story = await useAsyncStoryblok(
@@ -11,4 +13,6 @@ const story = await useAsyncStoryblok(
     version: "draft",
   },
 );
+
+useTitle(`${story.value.name} - Globaliseringskonferansen`);
 </script>
