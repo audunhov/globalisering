@@ -13,6 +13,9 @@
           >
         </div>
       </nav>
+
+      <Nyhetsbrev class="w-max mx-auto" />
+
       <p class="mt-10 text-center text-xs leading-5 text-gray-500">
         Et arrangement av Norges Sosiale Forum
       </p>
@@ -21,6 +24,8 @@
 </template>
 
 <script setup lang="ts">
+import Nyhetsbrev from "~/components/Nyhetsbrev.vue";
+
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: "draft",

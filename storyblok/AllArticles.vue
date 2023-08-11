@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Artikler
+          Siste nytt
         </h2>
       </div>
       <div
@@ -26,21 +26,19 @@
             class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
           />
 
-          <div
-            class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"
-          >
-            <time class="mr-8" :datetime="post.published_at">{{
+          <div class="items-center overflow-hidden leading-6">
+            <h3 class="mt-3 text-lg font-semibold text-white">
+              <a :href="post.full_slug">
+                <span class="absolute inset-0" />
+                {{ post.content.title }}
+              </a>
+            </h3>
+            <time class="text-gray-300 text-sm" :datetime="post.published_at">{{
               format(new Date(post.published_at), "PPp", {
                 locale: nb,
               })
             }}</time>
           </div>
-          <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
-            <a :href="post.full_slug">
-              <span class="absolute inset-0" />
-              {{ post.content.title }}
-            </a>
-          </h3>
         </article>
       </div>
     </div>
@@ -57,10 +55,13 @@ import { format } from "date-fns";
 import { nb } from "date-fns/locale";
 
 const storyblokApi = useStoryblokApi();
+
+const version = process.env.NODE_ENV === "production" ? "published" : "draft";
+
 const { data } = await storyblokApi.get("cdn/stories/", {
   starts_with: "artikler/",
-  version: "draft",
   resolve_links: "url",
   per_page: 3,
+  version,
 });
 </script>

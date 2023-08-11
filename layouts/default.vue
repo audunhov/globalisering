@@ -4,4 +4,5 @@
     <slot />
   </div>
   <Footer />
+  <Sponsor />
 </template>
