@@ -1,5 +1,5 @@
 <template>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+  <StoryblokComponent v-if="story" :blok="story.content" class="min-h-screen" />
 </template>
 
 <script setup lang="ts">
