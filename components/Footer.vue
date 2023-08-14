@@ -1,20 +1,21 @@
 <template>
   <footer class="bg-slate-800">
-    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <div
+      class="flex flex-col items-center mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8"
+    >
       <nav
-        class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
-        aria-label="Footer"
+        class="w-full columns-2 sm:flex sm:justify-center text-center sm:space-x-12"
       >
         <div v-for="item in links" :key="item._uid" class="pb-6">
           <NuxtLink
             class="text-gray-300 hover:text-gray-100"
-            :to="item.link.story.url"
+            :to="`/${item.link.cached_url}`"
             >{{ item.link.story.name }}</NuxtLink
           >
         </div>
       </nav>
 
-      <Nyhetsbrev class="w-max mx-auto" />
+      <Nyhetsbrev />
 
       <p class="mt-10 text-center text-xs leading-5 text-gray-500">
         Et arrangement av Norges Sosiale Forum

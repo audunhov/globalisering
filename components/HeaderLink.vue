@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="blok.link.story">
     <div class="text-center flex">
       <NuxtLink
         :to="blok.link.story.url"

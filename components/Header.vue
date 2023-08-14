@@ -35,7 +35,7 @@
       </div>
     </div>
   </nav>
-  <TransitionRoot as="template" :show="open">
+  <TransitionRoot :show="open">
     <div class="relative z-20">
       <TransitionChild
         as="template"
@@ -71,9 +71,13 @@
                   class="flex h-full flex-col overflow-y-scroll bg-primary text-secondary py-6"
                 >
                   <div
-                    class="relative mt-6 flex-1 space-y-6 px-4 sm:px-6 flex flex-col items-center lg:items-start"
+                    class="relative mt-20 flex-1 space-y-6 px-4 sm:px-6 flex flex-col items-center lg:items-start"
                   >
-                    <HeaderLink v-for="link in links" :blok="link" />
+                    <HeaderLink
+                      v-for="link in links"
+                      :key="link._uid"
+                      :blok="link"
+                    />
                   </div>
                 </div>
               </div>

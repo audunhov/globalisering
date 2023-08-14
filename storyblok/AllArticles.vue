@@ -19,9 +19,7 @@
             :alt="post.content.image.alt"
             class="absolute transition duration-500 inset-0 -z-10 h-full w-full object-cover group-hover:scale-110"
           />
-          <div
-            class="absolute inset-0 -z-10 bg-gradient-to-t from-primary/50"
-          />
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/40" />
 
           <div class="items-center overflow-hidden leading-6">
             <h3 class="mt-3 text-lg font-semibold text-white">
