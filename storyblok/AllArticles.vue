@@ -11,7 +11,7 @@
       >
         <article
           v-for="post in data.stories"
-          :key="post.uid"
+          :key="post.uuid"
           class="group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
         >
           <nuxt-img
@@ -20,10 +20,7 @@
             class="absolute transition duration-500 inset-0 -z-10 h-full w-full object-cover group-hover:scale-110"
           />
           <div
-            class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"
-          />
-          <div
-            class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+            class="absolute inset-0 -z-10 bg-gradient-to-t from-primary/50"
           />
 
           <div class="items-center overflow-hidden leading-6">
