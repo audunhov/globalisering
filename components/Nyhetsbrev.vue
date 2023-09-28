@@ -1,5 +1,5 @@
 <template>
-  <div class="py-16 sm:py-24 lg:py-32 text-gray-100">
+  <div class="py-16 text-gray-100">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div
         class="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl text-center"
@@ -18,12 +18,12 @@
             type="email"
             autocomplete="email"
             required=""
-            class="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
+            class="min-w-0 flex-auto border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
             placeholder="E-postaddresse"
           />
           <button
             type="submit"
-            class="flex-none rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            class="flex-none bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <ArrowRightIcon class="h-6" />
           </button>

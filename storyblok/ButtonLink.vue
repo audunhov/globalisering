@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-editable="blok"
-    class="p-3 text-xl"
+    class="p-3 text-xl inline-block w-full sm:w-auto hover:underline"
     :class="typeClasses[blok.style]"
     :to="blok.link.cached_url"
     >{{ blok.text }}
@@ -12,8 +12,8 @@
 import { Button } from "~/types";
 
 const typeClasses = {
-  primary: "bg-primary text-secondary hover:underline",
-  secondary: "bg-secondary text-primary hover:underline",
+  primary: "bg-primary text-secondary",
+  secondary: "bg-secondary text-primary",
 };
 
 defineProps<{

@@ -1,14 +1,14 @@
 <template>
   <nav class="sticky w-full top-0 z-50 bg-primary">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex h-20 justify-between">
+      <div class="flex h-12 justify-between">
         <div class="flex">
           <NuxtLink
             href="/"
             class="flex flex-shrink-0 items-center"
             @click="open = false"
           >
-            <GlobkonfLogo class="h-16" />
+            <GlobkonfLogo class="h-12" />
           </NuxtLink>
         </div>
 
@@ -64,14 +64,14 @@
               leave-to="translate-x-full"
             >
               <div
-                class="mt-20 pointer-events-auto w-screen lg:max-w-[50%] ml-auto"
+                class="mt-12 pointer-events-auto w-screen lg:max-w-[50%] ml-auto"
                 @click.stop
               >
                 <div
                   class="flex h-full flex-col overflow-y-scroll bg-primary text-secondary py-6"
                 >
                   <div
-                    class="relative mt-20 flex-1 space-y-6 px-4 sm:px-6 flex flex-col items-center lg:items-start"
+                    class="relative mt-12 flex-1 space-y-6 px-4 sm:px-6 flex flex-col items-center lg:items-start"
                   >
                     <HeaderLink
                       v-for="link in links"

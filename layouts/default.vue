@@ -1,8 +1,7 @@
 <template>
   <Header />
-  <div class="bg-secondary/50">
+  <div class="bg-secondary/40">
     <slot />
   </div>
   <Footer />
-  <Sponsor />
 </template>

@@ -10,12 +10,13 @@
           <NuxtLink
             class="text-gray-300 hover:text-gray-100"
             :to="`/${item.link.cached_url}`"
-            >{{ item.link.story.name }}</NuxtLink
           >
+            {{ item.link.story.name }}
+          </NuxtLink>
         </div>
       </nav>
 
-      <Nyhetsbrev />
+      <!--      <Nyhetsbrev />-->
 
       <p class="mt-10 text-center text-xs leading-5 text-gray-500">
         Et arrangement av Norges Sosiale Forum
@@ -25,8 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import Nyhetsbrev from "~/components/Nyhetsbrev.vue";
-
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get("cdn/stories/config", {
   version: "draft",
