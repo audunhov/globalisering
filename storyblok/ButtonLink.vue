@@ -3,13 +3,13 @@
     v-editable="blok"
     class="p-3 text-xl inline-block w-full sm:w-auto hover:underline"
     :class="typeClasses[blok.style]"
-    :to="blok.link.cached_url"
+    :to="blok.link?.cached_url"
     >{{ blok.text }}
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import { Button } from "~/types";
+import { ButtonLinkStoryblok } from "~/component-types-sb";
 
 const typeClasses = {
   primary: "bg-primary text-secondary",
@@ -17,6 +17,6 @@ const typeClasses = {
 };
 
 defineProps<{
-  blok: Button;
+  blok: ButtonLinkStoryblok;
 }>();
 </script>

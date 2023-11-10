@@ -1,7 +1,8 @@
 <template>
   <NuxtLink
+    v-if="blok.link?.cached_url"
     v-editable="blok"
-    :href="blok.link.cached_url || blok.link.url"
+    :href="blok.link.cached_url"
     class="p-10 block group transition-colors space-y-5 w-max border-4 border-gray-300 hover:border-primary"
   >
     <h1 class="text-3xl font-bold text-gray-900">
@@ -20,15 +21,9 @@
 
 <script setup lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/24/outline";
+import { BoxLinkStoryblok } from "~/component-types-sb";
 
 defineProps<{
-  blok: {
-    heading: string;
-    subheading: string;
-    link: {
-      url: string;
-      cached_url: string;
-    };
-  };
+  blok: BoxLinkStoryblok;
 }>();
 </script>

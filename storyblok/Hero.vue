@@ -14,22 +14,18 @@
       </div>
     </div>
     <nuxt-img
+      v-if="blok.image && blok.image.filename"
       class="absolute z-0 inset-0 w-full h-full object-cover"
       :src="blok.image.filename"
-      :alt="blok.image.alt"
+      :alt="blok.image.alt || 'hero image'"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { Button, Image } from "~/types";
+import { HeroStoryblok } from "~/component-types-sb";
 
 defineProps<{
-  blok: {
-    headline: string;
-    subheadline: string;
-    image: Image;
-    buttons: Button[];
-  };
+  blok: HeroStoryblok;
 }>();
 </script>

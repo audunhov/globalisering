@@ -5,11 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { SbBlokData } from "@storyblok/js";
+import { GridStoryblok } from "~/component-types-sb";
 
 defineProps<{
-  blok: {
-    columns: SbBlokData[];
-  };
+  blok: GridStoryblok;
 }>();
 </script>

@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { ISbRichtext } from "storyblok-js-client";
+import { TextStoryblok } from "~/component-types-sb";
 
 const props = defineProps<{
-  blok: {
-    text: ISbRichtext;
-  };
+  blok: TextStoryblok;
 }>();
 
 const richText = computed(() => renderRichText(props.blok.text));

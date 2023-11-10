@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
+import { PageStoryblok } from "~/component-types-sb";
+
 defineProps<{
-  blok: {
-    body: any[];
-  };
+  blok: PageStoryblok;
 }>();
 </script>

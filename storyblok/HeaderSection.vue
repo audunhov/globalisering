@@ -20,6 +20,8 @@
 </template>
 
 <script setup lang="ts">
+import { HeaderSectionStoryblok } from "~/component-types-sb";
+
 const styles = {
   left: "items-start text-left",
   center: "items-center text-center",
@@ -27,11 +29,6 @@ const styles = {
 };
 
 defineProps<{
-  blok: {
-    eyebrow?: string;
-    headline: string;
-    subheadline: string;
-    style: "left" | "center" | "right";
-  };
+  blok: HeaderSectionStoryblok;
 }>();
 </script>

@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { Button } from "~/types";
+import { Hero2Storyblok } from "~/component-types-sb";
 
 defineProps<{
-  blok: {
-    title: string;
-    images: Object;
-    description: string;
-    button: Button[];
-  };
+  blok: Hero2Storyblok;
 }>();
 </script>
 
@@ -66,7 +62,7 @@ defineProps<{
               >
                 <div class="relative">
                   <img
-                    :src="blok.images[0].filename"
+                    :src="blok.images?.[0].filename"
                     alt=""
                     class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
@@ -76,7 +72,7 @@ defineProps<{
                 </div>
                 <div class="relative">
                   <img
-                    :src="blok.images[1].filename"
+                    :src="blok.images?.[1].filename"
                     alt=""
                     class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />
@@ -88,7 +84,7 @@ defineProps<{
               <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                 <div class="relative">
                   <img
-                    :src="blok.images[2].filename"
+                    :src="blok.images?.[2].filename"
                     alt=""
                     class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                   />

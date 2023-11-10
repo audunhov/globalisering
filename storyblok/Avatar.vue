@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok">
     <img
-      v-if="blok.image.filename"
+      v-if="blok.image && blok.image.filename"
       class="inline-block h-6 w-6 rounded-full"
       :src="blok.image.filename"
       :alt="blok.image.alt"
@@ -18,13 +18,10 @@
 </template>
 
 <script setup lang="ts">
-import { Image } from "~/types";
+import { AvatarStoryblok } from "~/component-types-sb";
 
 defineProps<{
-  blok: {
-    image: Image;
-    name: string;
-  };
+  blok: AvatarStoryblok;
 }>();
 
 const getPlaceHolder = (name: string) => {

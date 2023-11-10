@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
+import { TeaserStoryblok } from "~/component-types-sb";
+
 defineProps<{
-  blok: {
-    headline: string;
-  };
+  blok: TeaserStoryblok;
 }>();
 </script>
