@@ -8,7 +8,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --fix",
-    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+    "generate-sb-types": "storyblok-generate-ts source=./components.239618.json target=./component-types-sb"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -26,7 +27,8 @@
     "eslint-plugin-vue": "^9.15.1",
     "nuxt": "^3.6.1",
     "nuxt-headlessui": "^1.1.4",
-    "prettier": "3.0.0"
+    "prettier": "3.0.0",
+    "storyblok-generate-ts": "^2.0.1"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.14",
