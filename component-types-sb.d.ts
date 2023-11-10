@@ -1,4 +1,4 @@
-import { StoryblokStory } from "storyblok-generate-ts";
+import {StoryblokStory} from 'storyblok-generate-ts'
 
 export interface AllArticlesStoryblok {
   _uid: string;
@@ -27,11 +27,9 @@ export interface ArticleStoryblok {
     | BoxLinkStoryblok
     | ButtonLinkStoryblok
     | ConfigStoryblok
-    | FeatureStoryblok
     | GridStoryblok
     | HeaderSectionStoryblok
     | HeroStoryblok
-    | Hero2Storyblok
     | ImageStoryblok
     | MenuLinkStoryblok
     | PageStoryblok
@@ -105,10 +103,7 @@ export type MultilinkStoryblok =
 export interface BoxLinkStoryblok {
   heading?: string;
   subheading?: string;
-  link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   _uid: string;
   component: "boxLink";
   [k: string]: any;
@@ -116,10 +111,7 @@ export interface BoxLinkStoryblok {
 
 export interface ButtonLinkStoryblok {
   text?: string;
-  link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   style?: "" | "primary" | "secondary";
   _uid: string;
   component: "buttonLink";
@@ -128,20 +120,10 @@ export interface ButtonLinkStoryblok {
 
 export interface ConfigStoryblok {
   header_menu?: MenuLinkStoryblok[];
-  header_button?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  header_button?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   logo?: AssetStoryblok;
   _uid: string;
   component: "config";
-  [k: string]: any;
-}
-
-export interface FeatureStoryblok {
-  name?: string;
-  _uid: string;
-  component: "feature";
   [k: string]: any;
 }
 
@@ -153,11 +135,9 @@ export interface GridStoryblok {
     | BoxLinkStoryblok
     | ButtonLinkStoryblok
     | ConfigStoryblok
-    | FeatureStoryblok
     | GridStoryblok
     | HeaderSectionStoryblok
     | HeroStoryblok
-    | Hero2Storyblok
     | ImageStoryblok
     | MenuLinkStoryblok
     | PageStoryblok
@@ -190,26 +170,6 @@ export interface HeroStoryblok {
   [k: string]: any;
 }
 
-export type MultiassetStoryblok = {
-  alt?: string;
-  copyright?: string;
-  id: number;
-  filename: string;
-  name: string;
-  title?: string;
-  [k: string]: any;
-}[];
-
-export interface Hero2Storyblok {
-  images?: MultiassetStoryblok;
-  title?: string;
-  description?: string;
-  buttons?: ButtonLinkStoryblok[];
-  _uid: string;
-  component: "hero2";
-  [k: string]: any;
-}
-
 export interface ImageStoryblok {
   image?: AssetStoryblok;
   _uid: string;
@@ -218,10 +178,7 @@ export interface ImageStoryblok {
 }
 
 export interface MenuLinkStoryblok {
-  link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   sublink?: MenuLinkStoryblok[];
   _uid: string;
   component: "menu_link";
@@ -236,11 +193,9 @@ export interface PageStoryblok {
     | BoxLinkStoryblok
     | ButtonLinkStoryblok
     | ConfigStoryblok
-    | FeatureStoryblok
     | GridStoryblok
     | HeaderSectionStoryblok
     | HeroStoryblok
-    | Hero2Storyblok
     | ImageStoryblok
     | MenuLinkStoryblok
     | PageStoryblok
@@ -262,11 +217,9 @@ export interface SectionStoryblok {
     | BoxLinkStoryblok
     | ButtonLinkStoryblok
     | ConfigStoryblok
-    | FeatureStoryblok
     | GridStoryblok
     | HeaderSectionStoryblok
     | HeroStoryblok
-    | Hero2Storyblok
     | ImageStoryblok
     | MenuLinkStoryblok
     | PageStoryblok
@@ -274,8 +227,7 @@ export interface SectionStoryblok {
     | TeaserStoryblok
     | TextStoryblok
   )[];
-  background?: AssetStoryblok;
-  width: "" | "standard" | "full";
+  width: "" | "standard" | "full" | "popout";
   _uid: string;
   component: "section";
   [k: string]: any;

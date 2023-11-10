@@ -194,29 +194,6 @@
       "icon": null
     },
     {
-      "name": "feature",
-      "display_name": null,
-      "created_at": "2023-07-03T16:49:44.579Z",
-      "updated_at": "2023-07-03T20:59:52.334Z",
-      "id": 4215596,
-      "schema": {
-        "name": {
-          "type": "text"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "feature",
-      "component_group_uuid": null,
-      "color": null,
-      "icon": null
-    },
-    {
       "name": "grid",
       "display_name": null,
       "created_at": "2023-07-03T16:49:44.559Z",
@@ -333,48 +310,6 @@
       "icon": null
     },
     {
-      "name": "hero2",
-      "display_name": null,
-      "created_at": "2023-09-28T16:01:59.362Z",
-      "updated_at": "2023-09-28T16:29:05.822Z",
-      "id": 4643922,
-      "schema": {
-        "images": {
-          "type": "multiasset",
-          "filetypes": [
-            "images"
-          ],
-          "allow_external_url": false
-        },
-        "title": {
-          "type": "text"
-        },
-        "description": {
-          "type": "textarea",
-          "max_length": 280
-        },
-        "buttons": {
-          "type": "bloks",
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "buttonLink"
-          ]
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "hero2",
-      "component_group_uuid": null,
-      "color": null,
-      "icon": null
-    },
-    {
       "name": "image",
       "display_name": null,
       "created_at": "2023-07-28T16:15:32.289Z",
@@ -463,16 +398,12 @@
       "name": "section",
       "display_name": null,
       "created_at": "2023-07-05T21:14:31.503Z",
-      "updated_at": "2023-07-05T21:22:43.446Z",
+      "updated_at": "2023-11-10T17:39:43.647Z",
       "id": 4231108,
       "schema": {
         "content": {
           "type": "bloks",
           "pos": 0
-        },
-        "background": {
-          "type": "asset",
-          "pos": 1
         },
         "width": {
           "type": "option",
@@ -487,12 +418,42 @@
               "_uid": "e012a7b4-a73a-4743-a283-a36689eaf821",
               "value": "full",
               "name": "Full"
+            },
+            {
+              "_uid": "21651df8-0a7c-4302-98ae-88eef579cf2f",
+              "value": "popout",
+              "name": "Popout"
             }
           ],
           "exclude_empty_option": false,
           "default_value": "full",
           "pos": 2,
           "required": true
+        },
+        "color": {
+          "type": "custom",
+          "regex": "",
+          "description": "",
+          "field_type": "storyblok-palette",
+          "options": [
+            {
+              "name": "size",
+              "value": "large",
+              "_uid": "fe33d787-cee4-4eb5-859a-b2b8def2747f"
+            },
+            {
+              "name": "defaultValue",
+              "value": "",
+              "_uid": "d3b0ded6-e520-4522-9675-4c17b287a96b"
+            },
+            {
+              "name": "colors",
+              "value": "[   \"#00B3B0\", \"#40C6C4\", \"#7FD9D7\"]",
+              "_uid": "b84b2df2-fd03-4ec0-93c3-4422b81c1659"
+            }
+          ],
+          "required_fields": "",
+          "external_datasource": "[   \"#00B3B0\", \"#40C6C4\", \"#7FD9D7\", \"#D9F4F3\",   \"#1B243F\", \"#545B6F\", \"#8D919F\", \"#C6C8CF\",   \"#B1B5BE\", \"#DFE3E8\", \"#E7EAEE\", \"#EFF1F3\",   \"#2DB47D\", \"#62C79E\", \"#96D9BE\", \"#CAECDE\",   \"#395ECE\", \"#6B87DB\", \"#9CAEE6\", \"#CDD7F3\",   \"#FBCE41\", \"#FCDB71\", \"#FDE6A0\", \"#FEF3CF\",   \"#FFAC00\", \"#FFC140\", \"#FFD57F\", \"#FFEABF\",   \"#FF6159\", \"#FF8983\", \"#FFB0AC\", \"#FFD7D5\"]"
         }
       },
       "image": null,

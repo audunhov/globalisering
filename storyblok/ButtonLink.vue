@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-editable="blok"
-    class="p-3 text-xl inline-block w-full sm:w-auto hover:underline"
+    class="p-2 text-xl inline-block tracking-widest rounded w-full hover:underline"
     :class="typeClasses[blok.style]"
     :to="blok.link?.cached_url"
     >{{ blok.text }}

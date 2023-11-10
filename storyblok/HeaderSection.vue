@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-editable="blok"
-    class="py-24 sm:py-32 w-screen mx-auto max-w-7xl px-6 lg:px-8"
-  >
+  <div v-editable="blok" class="py-24 sm:py-32 max-w-full px-6 lg:px-8">
     <div :class="styles[blok.style]" class="flex flex-col">
       <p class="text-base font-semibold leading-7 text-primary">
         {{ blok.eyebrow }}

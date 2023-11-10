@@ -1,14 +1,11 @@
 <template>
-  <div v-editable="blok" class="relative min-h-[500px] isolate">
-    <div class="h-full" :class="widths[blok.width]">
-      <StoryblokComponent v-for="b in blok.content" :key="b._uid" :blok="b" />
-    </div>
-    <nuxt-img
-      v-if="blok.background && blok.background.filename"
-      class="absolute -z-10 inset-0 w-full h-full object-cover"
-      :src="blok.background.filename"
-      :alt="blok.background.alt || 'background image'"
-    />
+  <div
+    v-editable="blok"
+    :class="widths[blok.width]"
+    :style="backgroundColor(blok.color.value)"
+    class="relative isolate"
+  >
+    <StoryblokComponent v-for="b in blok.content" :key="b._uid" :blok="b" />
   </div>
 </template>
 
@@ -16,11 +13,18 @@
 import { SectionStoryblok } from "~/component-types-sb";
 
 const widths = {
-  standard: "max-w-prose m-auto",
-  full: "",
+  standard: "p-5",
+  popout: "popout p-5",
+  full: "full py-5",
 };
 
 defineProps<{
   blok: SectionStoryblok;
 }>();
+
+function backgroundColor(color?: string) {
+  return {
+    backgroundColor: color || "transparent",
+  };
+}
 </script>

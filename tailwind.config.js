@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        responsive: "clamp(1rem, 5%, 3rem)",
+      },
       colors: {
         primary: "#0097aa",
         secondary: "#e6fefe",

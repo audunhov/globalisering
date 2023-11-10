@@ -1,7 +1,7 @@
 <template>
   <Header />
-  <div class="bg-secondary/40">
+  <div class="bg-secondary/10">
     <slot />
   </div>
-  <Footer />
+  <Footer class="mt-10" />
 </template>

@@ -17,7 +17,6 @@
       </nav>
 
       <!--      <Nyhetsbrev />-->
-
       <p class="mt-10 text-center text-xs leading-5 text-gray-500">
         Et arrangement av Norges Sosiale Forum
       </p>
