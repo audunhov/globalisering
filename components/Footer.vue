@@ -1,26 +1,41 @@
 <template>
-  <footer class="bg-slate-800">
-    <div
-      class="flex flex-col items-center mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8"
-    >
-      <nav
-        class="w-full columns-2 sm:flex sm:justify-center text-center sm:space-x-12"
-      >
-        <div v-for="item in links" :key="item._uid" class="pb-6">
-          <NuxtLink
-            class="text-gray-300 hover:text-gray-100"
-            :to="`/${item.link.cached_url}`"
-          >
-            {{ item.link.story.name }}
-          </NuxtLink>
-        </div>
-      </nav>
-
-      <!--      <Nyhetsbrev />-->
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">
-        Et arrangement av Norges Sosiale Forum
-      </p>
+  <footer
+    class="grid grid-rows-3 gap-10 bg-green-dark text-pink-default min-h-[400px] p-20"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="min-h-[200px]">
+        <h3 class="text-2xl">Info:</h3>
+        <ul class="space-y-2">
+          <li v-for="link in links" :key="link._uid">
+            <a class="underline hover:opacity-80" :href="link.link.story.url">{{link.link.story.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="min-h-[200px]">
+        <h3 class="text-2xl">Sosiale medier:</h3>
+        <ul class="space-y-2">
+          <li v-for="link in links" :key="link._uid">
+            <a class="underline hover:opacity-80" :href="link.link.story.url">{{link.link.story.name}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="min-h-[200px]">
+        <h3 class="text-2xl">Mer fra NSF:</h3>
+        <ul class="space-y-2">
+          <li v-for="link in links" :key="link._uid">
+            <a class="underline hover:opacity-80" :href="link.link.story.url">{{link.link.story.name}}</a>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <h3 class="text-vanilla text-3xl text-center">En annen verden er mulig!</h3>
+
+    <p class="text-green-default">
+      Design: Sunniva Prytz Sandnes
+      <br />
+      Nettside: Audun Hammer Hovda
+    </p>
   </footer>
 </template>
 

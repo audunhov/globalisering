@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { ImageStoryblok } from "~/component-types-sb";
+import type {ImageStoryblok} from "~/sb";
 
 defineProps<{
   blok: ImageStoryblok;

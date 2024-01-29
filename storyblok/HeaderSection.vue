@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { HeaderSectionStoryblok } from "~/component-types-sb";
+import type {HeaderSectionStoryblok} from "~/sb";
 
 const styles = {
   left: "items-start text-left",

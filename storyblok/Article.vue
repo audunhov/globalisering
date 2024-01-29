@@ -35,9 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { SbBlokData } from "@storyblok/js";
-import { Image } from "~/types";
-import { ArticleStoryblok } from "~/component-types-sb";
+import type {ArticleStoryblok} from "~/sb";
 
 defineProps<{
   blok: ArticleStoryblok;
