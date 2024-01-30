@@ -18,7 +18,7 @@ defineProps<{
                 class="text-lg px-10 text-black brightness-125 tracking-wide font-semibold rounded-full p-3 bg-green-default hover:opacity-80 uppercase">
         Program
       </NuxtLink>
-      <a href="/billetter"
+      <a href="#"
          class="text-lg px-10 text-black tracking-wide brightness-125 font-semibold rounded-full p-3 bg-green-default hover:opacity-80  uppercase">Billetter</a>
     </div>
 
